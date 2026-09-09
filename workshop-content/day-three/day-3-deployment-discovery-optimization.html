@@ -7,7 +7,8 @@
   <meta name="description"
     content="JAM.26 Day 3 workshop: deploy with Vercel, connect domains with Cloudflare, verify production, configure search discovery, analyze PageSpeed, and debug production issues.">
   <title>Day 3 | Deployment, Discovery &amp; Optimization | JAM.26</title>
-  <link rel="canonical" href="https://ai-programming-jam.shoug-tech.com/workshop-content/day-three/day-3-deployment-discovery-optimization.html">
+  <link rel="canonical"
+    href="https://ai-programming-jam.shoug-tech.com/workshop-content/day-three/day-3-deployment-discovery-optimization.html">
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -632,7 +633,9 @@
       padding: 20px;
     }
 
-    .screenshot-card.missing figcaption { padding: 0; }
+    .screenshot-card.missing figcaption {
+      padding: 0;
+    }
 
     .host-choice {
       margin: 18px 0 6px;
@@ -713,7 +716,9 @@
       z-index: 1000;
     }
 
-    .image-lightbox.open { display: flex; }
+    .image-lightbox.open {
+      display: flex;
+    }
 
     .lightbox-content {
       align-items: center;
@@ -740,7 +745,8 @@
       text-align: center;
     }
 
-    .lightbox-close, .lightbox-nav {
+    .lightbox-close,
+    .lightbox-nav {
       align-items: center;
       background: #fff;
       border: 3px solid var(--ink);
@@ -752,18 +758,57 @@
       position: absolute;
     }
 
-    .lightbox-close { font-size: 26px; height: 46px; right: 22px; top: 20px; width: 46px; }
-    .lightbox-nav { font-size: 34px; height: 58px; top: 50%; transform: translateY(-50%); width: 52px; }
-    .lightbox-nav:hover, .lightbox-close:hover { background: var(--teal); }
-    .lightbox-prev { left: 20px; }
-    .lightbox-next { right: 20px; }
+    .lightbox-close {
+      font-size: 26px;
+      height: 46px;
+      right: 22px;
+      top: 20px;
+      width: 46px;
+    }
+
+    .lightbox-nav {
+      font-size: 34px;
+      height: 58px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+    }
+
+    .lightbox-nav:hover,
+    .lightbox-close:hover {
+      background: var(--teal);
+    }
+
+    .lightbox-prev {
+      left: 20px;
+    }
+
+    .lightbox-next {
+      right: 20px;
+    }
 
     @media (max-width: 640px) {
-      .image-lightbox { padding: 70px 14px 90px; }
-      .lightbox-nav { bottom: 18px; top: auto; transform: none; }
-      .lightbox-prev { left: calc(50% - 62px); }
-      .lightbox-next { right: calc(50% - 62px); }
-      .lightbox-content img { max-height: calc(100vh - 210px); }
+      .image-lightbox {
+        padding: 70px 14px 90px;
+      }
+
+      .lightbox-nav {
+        bottom: 18px;
+        top: auto;
+        transform: none;
+      }
+
+      .lightbox-prev {
+        left: calc(50% - 62px);
+      }
+
+      .lightbox-next {
+        right: calc(50% - 62px);
+      }
+
+      .lightbox-content img {
+        max-height: calc(100vh - 210px);
+      }
     }
 
     ol.stepper {
@@ -1431,19 +1476,27 @@
       <h4 class="mini-title">Deploy the application on Vercel</h4>
       <div class="screenshot-grid">
         <figure class="screenshot-card">
-          <img src="assets/01-vercel-import-repository.png" alt="Importing the University Portal repository into Vercel" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <img src="assets/01-vercel-import-repository.png" alt="Importing the University Portal repository into Vercel"
+            loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
           <figcaption>Import the GitHub repository into Vercel<code>01-vercel-import-repository.png</code></figcaption>
         </figure>
         <figure class="screenshot-card">
-          <img src="assets/02-vercel-environment-variables.png" alt="Firebase environment variables configured in Vercel" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
-          <figcaption>Add every environment variable for Production and Preview<code>02-vercel-environment-variables.png</code></figcaption>
+          <img src="assets/02-vercel-environment-variables.png"
+            alt="Firebase environment variables configured in Vercel" loading="lazy"
+            onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Add every environment variable for Production and
+            Preview<code>02-vercel-environment-variables.png</code></figcaption>
         </figure>
         <figure class="screenshot-card">
-          <img src="assets/02-vercel-environment-variables-2.png" alt="The local .env file the Vercel environment variables are copied from" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
-          <figcaption>Copy the keys and values from your local .env file<code>02-vercel-environment-variables-2.png</code></figcaption>
+          <img src="assets/02-vercel-environment-variables-2.png"
+            alt="The local .env file the Vercel environment variables are copied from" loading="lazy"
+            onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Copy the keys and values from your local .env
+            file<code>02-vercel-environment-variables-2.png</code></figcaption>
         </figure>
         <figure class="screenshot-card">
-          <img src="assets/03-vercel-deployment-success.png" alt="Successful University Portal deployment in Vercel" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <img src="assets/03-vercel-deployment-success.png" alt="Successful University Portal deployment in Vercel"
+            loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
           <figcaption>Verify the successful Vercel deployment<code>03-vercel-deployment-success.png</code></figcaption>
         </figure>
       </div>
@@ -1461,7 +1514,9 @@
             the Firebase keys from Day&nbsp;2, anything with server routes or API functions, or when you want an
             automatic preview deployment for every push. This is the route the Jam projects take.</p>
           <div class="dns-line"><b>Cloudflare record</b>CNAME &nbsp;<code>your-subdomain</code> &nbsp;&rarr;&nbsp; the
-            <code>&hellip;.vercel-dns-017.com</code> value Vercel shows you &middot; Proxy status: <strong>DNS only</strong></div>
+            <code>&hellip;.vercel-dns-017.com</code> value Vercel shows you &middot; Proxy status: <strong>DNS
+              only</strong>
+          </div>
         </div>
         <div class="host-card github">
           <span class="badge">Use GitHub Pages when</span>
@@ -1470,7 +1525,8 @@
             environment variables and no server code. It is free, it publishes directly from a branch, and it is the
             simplest option for a portfolio page or documentation site &mdash; but it cannot hide secrets or run a
             backend.</p>
-          <div class="dns-line"><b>Cloudflare records</b>Root domain: four A records &rarr; <code>185.199.108.153</code>,
+          <div class="dns-line"><b>Cloudflare records</b>Root domain: four A records &rarr;
+            <code>185.199.108.153</code>,
             <code>185.199.109.153</code>, <code>185.199.110.153</code>, <code>185.199.111.153</code><br>Subdomain: CNAME
             &rarr; <code>your-username.github.io</code> &middot; Proxy status: <strong>DNS only</strong>
           </div>
@@ -1483,35 +1539,48 @@
 
       <div class="screenshot-grid single">
         <figure class="screenshot-card">
-          <img src="assets/04-cloudflare-dns-records.png" alt="The DNS Records screen in the Cloudflare dashboard" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
-          <figcaption>Find DNS → Records in Cloudflare (shared starting point)<code>04-cloudflare-dns-records.png</code></figcaption>
+          <img src="assets/04-cloudflare-dns-records.png" alt="The DNS Records screen in the Cloudflare dashboard"
+            loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Find DNS → Records in Cloudflare (shared starting point)<code>04-cloudflare-dns-records.png</code>
+          </figcaption>
         </figure>
       </div>
 
       <h4 class="mini-title">Path A &mdash; hosting on Vercel</h4>
       <div class="screenshot-grid">
         <figure class="screenshot-card">
-          <img src="assets/04-cloudflare-dns-records-for-vercel-1.png" alt="Adding an existing domain to a Vercel project and copying the CNAME target" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
-          <figcaption>Vercel → Domains → Add Existing, then copy the CNAME value<code>04-cloudflare-dns-records-for-vercel-1.png</code></figcaption>
+          <img src="assets/04-cloudflare-dns-records-for-vercel-1.png"
+            alt="Adding an existing domain to a Vercel project and copying the CNAME target" loading="lazy"
+            onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Vercel → Domains → Add Existing, then copy the CNAME
+            value<code>04-cloudflare-dns-records-for-vercel-1.png</code></figcaption>
         </figure>
         <figure class="screenshot-card">
-          <img src="assets/04-cloudflare-dns-records-for-vercel-2.png" alt="Creating the matching CNAME record in Cloudflare with the proxy disabled" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
-          <figcaption>Paste it into a Cloudflare CNAME record with the proxy off<code>04-cloudflare-dns-records-for-vercel-2.png</code></figcaption>
+          <img src="assets/04-cloudflare-dns-records-for-vercel-2.png"
+            alt="Creating the matching CNAME record in Cloudflare with the proxy disabled" loading="lazy"
+            onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Paste it into a Cloudflare CNAME record with the proxy
+            off<code>04-cloudflare-dns-records-for-vercel-2.png</code></figcaption>
         </figure>
       </div>
 
       <h4 class="mini-title">Path B &mdash; hosting on GitHub Pages</h4>
       <div class="screenshot-grid single">
         <figure class="screenshot-card">
-          <img src="assets/04-cloudflare-dns-records-for-github.png" alt="Cloudflare A records pointing an apex domain at GitHub Pages" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
-          <figcaption>Add GitHub's four A records for the root domain<code>04-cloudflare-dns-records-for-github.png</code></figcaption>
+          <img src="assets/04-cloudflare-dns-records-for-github.png"
+            alt="Cloudflare A records pointing an apex domain at GitHub Pages" loading="lazy"
+            onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Add GitHub's four A records for the root
+            domain<code>04-cloudflare-dns-records-for-github.png</code></figcaption>
         </figure>
       </div>
 
       <h4 class="mini-title">Verify the live domain (both paths)</h4>
       <div class="screenshot-grid single">
         <figure class="screenshot-card">
-          <img src="assets/05-custom-domain-https-working.png" alt="The application working through its HTTPS custom domain" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <img src="assets/05-custom-domain-https-working.png"
+            alt="The application working through its HTTPS custom domain" loading="lazy"
+            onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
           <figcaption>Verify the custom domain and HTTPS<code>05-custom-domain-https-working.png</code></figcaption>
         </figure>
       </div>
@@ -1519,39 +1588,40 @@
       <h4 class="mini-title">Make the site discoverable</h4>
       <div class="screenshot-grid">
         <figure class="screenshot-card">
-          <img src="assets/06-google-search-console-sitemap.png" alt="Adding a new property in Google Search Console" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <img src="assets/06-google-search-console-sitemap.png" alt="Adding a new property in Google Search Console"
+            loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
           <figcaption>Google Search Console → Add property<code>06-google-search-console-sitemap.png</code></figcaption>
         </figure>
         <figure class="screenshot-card">
-          <img src="assets/06-google-search-console-sitemap-2.png" alt="Choosing the URL prefix property type and entering the production URL" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
-          <figcaption>Pick URL prefix and paste the production URL<code>06-google-search-console-sitemap-2.png</code></figcaption>
+          <img src="assets/06-google-search-console-sitemap-2.png"
+            alt="Choosing the URL prefix property type and entering the production URL" loading="lazy"
+            onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Pick URL prefix and paste the production URL<code>06-google-search-console-sitemap-2.png</code>
+          </figcaption>
         </figure>
         <figure class="screenshot-card">
-          <img src="assets/06-google-search-console-sitemap-3.png" alt="Submitting sitemap.xml in Google Search Console and seeing it succeed" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
-          <figcaption>Submit sitemap.xml and confirm the Success status<code>06-google-search-console-sitemap-3.png</code></figcaption>
+          <img src="assets/06-google-search-console-sitemap-3.png"
+            alt="Submitting sitemap.xml in Google Search Console and seeing it succeed" loading="lazy"
+            onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Submit sitemap.xml and confirm the Success
+            status<code>06-google-search-console-sitemap-3.png</code></figcaption>
         </figure>
       </div>
 
       <h4 class="mini-title">Measure, improve, redeploy</h4>
       <div class="screenshot-grid">
         <figure class="screenshot-card">
-          <img src="assets/07-pagespeed-before-optimization.png" alt="PageSpeed Insights result before optimization" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
-          <figcaption>Measure performance before improvement<code>07-pagespeed-before-optimization.png</code></figcaption>
+          <img src="assets/07-pagespeed-before-optimization.png" alt="PageSpeed Insights result before optimization"
+            loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Measure performance before improvement<code>07-pagespeed-before-optimization.png</code>
+          </figcaption>
         </figure>
         <figure class="screenshot-card">
-          <img src="assets/08-pagespeed-after-optimization.png" alt="PageSpeed Insights result after optimization" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <img src="assets/08-pagespeed-after-optimization.png" alt="PageSpeed Insights result after optimization"
+            loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
           <figcaption>Compare performance after improvement<code>08-pagespeed-after-optimization.png</code></figcaption>
         </figure>
       </div>
-
-      <div class="img-placeholder" style="min-height:260px;">
-        <div class="icon">VIDEO</div>
-        <div class="label">Instructor Demo Recording</div>
-        <div class="hint">Add the Day 3 deployment, domain, discovery, and optimization walkthrough here later.</div>
-      </div>
-
-      <div class="note-callout">Watch the full chain: GitHub → Vercel → Cloudflare → Production Domain → Search Engines
-        → PageSpeed Insights → Improvement → Redeployment. The app should stay functional the whole way through.</div>
     </section>
 
     <!-- YOUR EXERCISE -->
@@ -1738,7 +1808,8 @@
 
   </main>
 
-  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="Enlarged workshop screenshot">
+  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true"
+    aria-label="Enlarged workshop screenshot">
     <button class="lightbox-close" type="button" aria-label="Close enlarged image">×</button>
     <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
     <div class="lightbox-content">

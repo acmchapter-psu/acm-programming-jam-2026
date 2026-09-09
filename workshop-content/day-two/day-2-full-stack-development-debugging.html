@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Day 2 | Full-Stack Development &amp; Debugging | JAM.26</title>
-  <link rel="canonical" href="https://ai-programming-jam.shoug-tech.com/workshop-content/day-two/day-2-full-stack-development-debugging.html">
+  <link rel="canonical"
+    href="https://ai-programming-jam.shoug-tech.com/workshop-content/day-two/day-2-full-stack-development-debugging.html">
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
   <meta name="description"
     content="JAM.26 Day 2 workshop: Firebase authentication, Firestore persistence, user-specific data, security rules, debugging with evidence, and optional AI workflow automation.">
@@ -716,15 +717,36 @@
       background: var(--teal);
     }
 
-    .lightbox-prev { left: 20px; }
-    .lightbox-next { right: 20px; }
+    .lightbox-prev {
+      left: 20px;
+    }
+
+    .lightbox-next {
+      right: 20px;
+    }
 
     @media (max-width: 640px) {
-      .image-lightbox { padding: 70px 14px 90px; }
-      .lightbox-nav { bottom: 18px; top: auto; transform: none; }
-      .lightbox-prev { left: calc(50% - 62px); }
-      .lightbox-next { right: calc(50% - 62px); }
-      .lightbox-content img { max-height: calc(100vh - 210px); }
+      .image-lightbox {
+        padding: 70px 14px 90px;
+      }
+
+      .lightbox-nav {
+        bottom: 18px;
+        top: auto;
+        transform: none;
+      }
+
+      .lightbox-prev {
+        left: calc(50% - 62px);
+      }
+
+      .lightbox-next {
+        right: calc(50% - 62px);
+      }
+
+      .lightbox-content img {
+        max-height: calc(100vh - 210px);
+      }
     }
 
     .video-placeholder {
@@ -1241,19 +1263,23 @@
 
       <div class="screenshot-grid">
         <figure class="screenshot-card">
-          <img src="assets/03-firebase-authentication-overview.png" alt="Firebase Authentication overview" loading="lazy">
+          <img src="assets/03-firebase-authentication-overview.png" alt="Firebase Authentication overview"
+            loading="lazy">
           <figcaption>Firebase Authentication overview</figcaption>
         </figure>
         <figure class="screenshot-card">
-          <img src="assets/04-firebase-authentication-sign-in-methods.png" alt="Firebase Authentication sign-in methods" loading="lazy">
+          <img src="assets/04-firebase-authentication-sign-in-methods.png" alt="Firebase Authentication sign-in methods"
+            loading="lazy">
           <figcaption>Choose a sign-in provider</figcaption>
         </figure>
         <figure class="screenshot-card">
-          <img src="assets/05-firebase-enable-email-password.png" alt="Email and Password enabled in Firebase Authentication" loading="lazy">
+          <img src="assets/05-firebase-enable-email-password.png"
+            alt="Email and Password enabled in Firebase Authentication" loading="lazy">
           <figcaption>Email/Password enabled</figcaption>
         </figure>
         <figure class="screenshot-card">
-          <img src="assets/06-firebase-authentication-users.png" alt="Firebase Authentication users list" loading="lazy">
+          <img src="assets/06-firebase-authentication-users.png" alt="Firebase Authentication users list"
+            loading="lazy">
           <figcaption>Authentication users</figcaption>
         </figure>
       </div>
@@ -1311,12 +1337,30 @@
       </div>
 
       <div class="screenshot-grid">
-        <figure class="screenshot-card"><img src="assets/12-firestore-open-product.png" alt="Firebase navigation to Firestore" loading="lazy"><figcaption>Open Firestore Database</figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/13-firestore-start-create-database.png" alt="Firestore create database button" loading="lazy"><figcaption>Start database creation</figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/14-firestore-select-standard-edition.png" alt="Firestore Standard edition selected" loading="lazy"><figcaption>Select Standard edition</figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/15-firestore-select-database-location.png" alt="Firestore database location selection" loading="lazy"><figcaption>Choose the database location</figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/16-firestore-configure-production-mode.png" alt="Firestore production mode configuration" loading="lazy"><figcaption>Configure production mode</figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/17-firestore-database-created.png" alt="Newly created Firestore database" loading="lazy"><figcaption>Firestore database created</figcaption></figure>
+        <figure class="screenshot-card"><img src="assets/12-firestore-open-product.png"
+            alt="Firebase navigation to Firestore" loading="lazy">
+          <figcaption>Open Firestore Database</figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/13-firestore-start-create-database.png"
+            alt="Firestore create database button" loading="lazy">
+          <figcaption>Start database creation</figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/14-firestore-select-standard-edition.png"
+            alt="Firestore Standard edition selected" loading="lazy">
+          <figcaption>Select Standard edition</figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/15-firestore-select-database-location.png"
+            alt="Firestore database location selection" loading="lazy">
+          <figcaption>Choose the database location</figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/16-firestore-configure-production-mode.png"
+            alt="Firestore production mode configuration" loading="lazy">
+          <figcaption>Configure production mode</figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/17-firestore-database-created.png"
+            alt="Newly created Firestore database" loading="lazy">
+          <figcaption>Firestore database created</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -1676,35 +1720,61 @@ Developer reviews result</pre>
       </ol>
 
       <div class="screenshot-grid">
-        <figure class="screenshot-card"><img src="assets/01-firebase-create-project.png" alt="Create Firebase project" loading="lazy"><figcaption>Create a Firebase project</figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/02-firebase-verify-project-creation.png" alt="Firebase project creation verification" loading="lazy"><figcaption>Verify project creation</figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/07-firebase-authentication-user-uid.png" alt="Firebase Authentication user details showing the identity provider and UID" loading="lazy"><figcaption>Authentication user details: provider and UID</figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/08-firebase-project-dashboard-get-started.png" alt="Firebase project dashboard getting started" loading="lazy"><figcaption>Firebase setup starting point</figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/09-firebase-register-web-app.png" alt="Register a Firebase web app" loading="lazy"><figcaption>Register the web application</figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/10-firebase-analytics-dashboard.png" alt="Firebase Analytics dashboard" loading="lazy"><figcaption>Firebase Analytics dashboard</figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/11-firebase-project-overview.png" alt="Firebase project overview" loading="lazy"><figcaption>Firebase project overview</figcaption></figure>
+        <figure class="screenshot-card"><img src="assets/01-firebase-create-project.png" alt="Create Firebase project"
+            loading="lazy">
+          <figcaption>Create a Firebase project</figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/02-firebase-verify-project-creation.png"
+            alt="Firebase project creation verification" loading="lazy">
+          <figcaption>Verify project creation</figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/07-firebase-authentication-user-uid.png"
+            alt="Firebase Authentication user details showing the identity provider and UID" loading="lazy">
+          <figcaption>Authentication user details: provider and UID</figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/08-firebase-project-dashboard-get-started.png"
+            alt="Firebase project dashboard getting started" loading="lazy">
+          <figcaption>Firebase setup starting point</figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/09-firebase-register-web-app.png"
+            alt="Register a Firebase web app" loading="lazy">
+          <figcaption>Register the web application</figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/10-firebase-analytics-dashboard.png"
+            alt="Firebase Analytics dashboard" loading="lazy">
+          <figcaption>Firebase Analytics dashboard</figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/11-firebase-project-overview.png"
+            alt="Firebase project overview" loading="lazy">
+          <figcaption>Firebase project overview</figcaption>
+        </figure>
 
         <!-- Add these files to assets/ with these exact names; they will display automatically. -->
-        <figure class="screenshot-card"><img src="assets/18-firestore-task-document-owner-id.png" alt="Firestore task document with owner ID" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')"><figcaption>Task collection, document fields, and ownerId<code>18-firestore-task-document-owner-id.png</code></figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/19-firestore-security-rules.png" alt="Firestore Security Rules" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')"><figcaption>Firestore Security Rules for user-owned tasks<code>19-firestore-security-rules.png</code></figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/20-devtools-debugging-evidence.png" alt="Browser DevTools debugging evidence" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')"><figcaption>Browser DevTools evidence for a real failure<code>20-devtools-debugging-evidence.png</code></figcaption></figure>
-        <figure class="screenshot-card"><img src="assets/21-study-task-tracker-working.png" alt="Working Study Task Tracker" loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')"><figcaption>Finished Study Task Tracker: signed in with persistent tasks<code>21-study-task-tracker-working.png</code></figcaption></figure>
-      </div>
-
-      <div class="img-placeholder video-placeholder">
-        <div class="icon">VIDEO</div>
-        <div class="label">Instructor Demo Recording</div>
-        <div class="hint">
-          Add the Day 2 walkthrough recording here when it is ready.
-        </div>
-      </div>
-
-      <div class="note-callout">
-        Watch the transformation:
-        Local Website → Authenticated Application → Persistent Data → User-Owned Data → Debugged Full-Stack Feature.
+        <figure class="screenshot-card"><img src="assets/18-firestore-task-document-owner-id.png"
+            alt="Firestore task document with owner ID" loading="lazy"
+            onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Task collection, document fields, and ownerId<code>18-firestore-task-document-owner-id.png</code>
+          </figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/19-firestore-security-rules.png" alt="Firestore Security Rules"
+            loading="lazy" onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Firestore Security Rules for user-owned tasks<code>19-firestore-security-rules.png</code>
+          </figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/20-devtools-debugging-evidence.png"
+            alt="Browser DevTools debugging evidence" loading="lazy"
+            onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Browser DevTools evidence for a real failure<code>20-devtools-debugging-evidence.png</code>
+          </figcaption>
+        </figure>
+        <figure class="screenshot-card"><img src="assets/21-study-task-tracker-working.png"
+            alt="Working Study Task Tracker" loading="lazy"
+            onerror="this.hidden=true;this.closest('figure').classList.add('missing')">
+          <figcaption>Finished Study Task Tracker: signed in with persistent
+            tasks<code>21-study-task-tracker-working.png</code></figcaption>
+        </figure>
       </div>
     </section>
-
     <section class="block" id="exercise">
       <div class="sec-head">
         <span class="sec-num">09</span>
@@ -1964,7 +2034,8 @@ Developer reviews result</pre>
 
   </main>
 
-  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="Enlarged workshop screenshot">
+  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true"
+    aria-label="Enlarged workshop screenshot">
     <button class="lightbox-close" type="button" aria-label="Close enlarged image">×</button>
     <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
     <div class="lightbox-content">

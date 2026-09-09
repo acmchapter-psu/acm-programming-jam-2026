@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Day 1 | Planning and Development Workflow | JAM.26</title>
-  <link rel="canonical" href="https://ai-programming-jam.shoug-tech.com/workshop-content/day-one/day-1-planning-development-workflow.html">
+  <link rel="canonical"
+    href="https://ai-programming-jam.shoug-tech.com/workshop-content/day-one/day-1-planning-development-workflow.html">
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -551,7 +552,9 @@
       z-index: 1000;
     }
 
-    .image-lightbox.open { display: flex; }
+    .image-lightbox.open {
+      display: flex;
+    }
 
     .lightbox-content {
       align-items: center;
@@ -578,7 +581,8 @@
       text-align: center;
     }
 
-    .lightbox-close, .lightbox-nav {
+    .lightbox-close,
+    .lightbox-nav {
       align-items: center;
       background: #fff;
       border: 3px solid var(--ink);
@@ -590,18 +594,57 @@
       position: absolute;
     }
 
-    .lightbox-close { font-size: 26px; height: 46px; right: 22px; top: 20px; width: 46px; }
-    .lightbox-nav { font-size: 34px; height: 58px; top: 50%; transform: translateY(-50%); width: 52px; }
-    .lightbox-nav:hover, .lightbox-close:hover { background: var(--teal); }
-    .lightbox-prev { left: 20px; }
-    .lightbox-next { right: 20px; }
+    .lightbox-close {
+      font-size: 26px;
+      height: 46px;
+      right: 22px;
+      top: 20px;
+      width: 46px;
+    }
+
+    .lightbox-nav {
+      font-size: 34px;
+      height: 58px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+    }
+
+    .lightbox-nav:hover,
+    .lightbox-close:hover {
+      background: var(--teal);
+    }
+
+    .lightbox-prev {
+      left: 20px;
+    }
+
+    .lightbox-next {
+      right: 20px;
+    }
 
     @media (max-width: 640px) {
-      .image-lightbox { padding: 70px 14px 90px; }
-      .lightbox-nav { bottom: 18px; top: auto; transform: none; }
-      .lightbox-prev { left: calc(50% - 62px); }
-      .lightbox-next { right: calc(50% - 62px); }
-      .lightbox-content img { max-height: calc(100vh - 210px); }
+      .image-lightbox {
+        padding: 70px 14px 90px;
+      }
+
+      .lightbox-nav {
+        bottom: 18px;
+        top: auto;
+        transform: none;
+      }
+
+      .lightbox-prev {
+        left: calc(50% - 62px);
+      }
+
+      .lightbox-next {
+        right: calc(50% - 62px);
+      }
+
+      .lightbox-content img {
+        max-height: calc(100vh - 210px);
+      }
     }
 
     .video-placeholder {
@@ -1145,7 +1188,8 @@
       <p class="lead">AI can generate code very quickly, but somebody still has to define what the application is
         actually supposed to do.</p>
       <p class="lead">Before implementation begins, you should be able to explain the application's <b>users</b>,
-        <b>pages</b>, <b>features</b>, <b>actions</b>, <b>data</b>, and <b>expected behavior</b>.</p>
+        <b>pages</b>, <b>features</b>, <b>actions</b>, <b>data</b>, and <b>expected behavior</b>.
+      </p>
       <h4 class="mini-title">How to break down a requirement</h4>
       <ul class="bullet-list">
         <li>Start with the requirement, not the code</li>
@@ -1211,7 +1255,8 @@
       <h4 class="mini-title">Example design prompt</h4>
       <div class="prompt-card">
         <div class="head">UI PLANNING PROMPT</div>
-        <div class="term">Design a simple web application for a university portal with three roles: student, instructor, and administrator.
+        <div class="term">Design a simple web application for a university portal with three roles: student, instructor,
+          and administrator.
 
           The interface should allow:
           - a student to browse available courses, enroll or drop, and see their credit limit
@@ -1446,7 +1491,8 @@
         <h2 class="sec-title"><span class="hash">##</span> Worked Example</h2>
       </div>
       <p class="lead">Your instructor will demonstrate the complete workflow using a small application called the
-        <b>University Portal</b>.</p>
+        <b>University Portal</b>.
+      </p>
       <div class="requirement-card">
         <div class="req-head">Instructor Example / Requirement Brief</div>
         <div class="req-body">
@@ -1484,16 +1530,19 @@
               <div class="label">Required Actions</div>
               <ul>
                 <li>Sign in and out</li>
-                <li>Student: view available and enrolled courses, enroll, drop, view grades, and update personal information</li>
+                <li>Student: view available and enrolled courses, enroll, drop, view grades, and update personal
+                  information</li>
                 <li>Instructor: view enrolled students, grade assignments, update course info</li>
-                <li>Administrator: manage student and instructor accounts, create and manage courses, view enrollment statistics, and generate reports</li>
+                <li>Administrator: manage student and instructor accounts, create and manage courses, view enrollment
+                  statistics, and generate reports</li>
               </ul>
             </div>
             <div class="req-box">
               <div class="label">Controls &amp; Relationships</div>
               <ul>
                 <li>Administrator controls student credit limits and course capacity</li>
-                <li>Instructor is assigned to courses and controls the course information they are allowed to update</li>
+                <li>Instructor is assigned to courses and controls the course information they are allowed to update
+                </li>
                 <li>Instructor assigns grades and exam types</li>
                 <li>Student can view course information, exam types, and grades</li>
               </ul>
@@ -1568,16 +1617,7 @@
           <figcaption>4 — The working implementation committed to GitHub.</figcaption>
         </figure>
       </div>
-      <div class="img-placeholder video-placeholder">
-        <div class="icon">VIDEO</div>
-        <div class="label">Instructor Demo Recording</div>
-        <div class="hint">Add the recorded walkthrough here after the workshop or once the demonstration video is ready.
-        </div>
-      </div>
-      <div class="important-callout"><strong>The feature is not the lesson.</strong> The lesson is the workflow used to
-        move from an unclear requirement to a tested and committed implementation.</div>
     </section>
-
     <section class="block" id="exercise">
       <div class="sec-head"><span class="sec-num">09</span>
         <h2 class="sec-title"><span class="hash">##</span> Your Exercise</h2>
@@ -1837,7 +1877,8 @@
     </section>
   </main>
 
-  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="Enlarged workshop screenshot">
+  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true"
+    aria-label="Enlarged workshop screenshot">
     <button class="lightbox-close" type="button" aria-label="Close enlarged image">×</button>
     <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
     <div class="lightbox-content">
